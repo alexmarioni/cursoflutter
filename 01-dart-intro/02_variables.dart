@@ -18,7 +18,9 @@ void main() {
     2: 200,
     3: true,
     4: 'fire',
-    5: ['grego/front.png', 'grego/back.png']
+    5: {
+      1:'grego/front.png',
+      2:'grego/back.png'}
   };
 
   print("""
@@ -30,5 +32,5 @@ void main() {
   $errorMessage
   """);
 
-  print(pokemons);
+  print('Back: ${pokemons[5][2]}');
 }
