@@ -16,7 +16,6 @@ void main(List<String> arguments) {
 
   //MÉTODO 1
   //mapa llenado iterando, pasando por los números pares de la lista
-  // ignore: unused_local_variable
   var mapa = {for (int i = 1; i < 20; i += 2) lista[i]: lista[i] * 3};
   //print(mapa);
 
@@ -33,7 +32,6 @@ void main(List<String> arguments) {
   //MÉTODO 3
   Random random = Random();
   int tamanio = random.nextInt(40) + 10;
-  // ignore: unused_local_variable
   List<int> listaAleatoria = List.generate(tamanio, (_) => random.nextInt(100));
   //print(listaAleatoria);
 
