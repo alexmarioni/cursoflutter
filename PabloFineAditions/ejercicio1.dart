@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 /*1. Reorganización de Listas
 
 Crea una lista inicial de números enteros del 1 al 20.
