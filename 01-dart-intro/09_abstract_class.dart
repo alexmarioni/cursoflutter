@@ -1,7 +1,9 @@
 void main() {
   final windplant = WindPlant(initialenergy: 100);
+  final nuclearplant = nuclearPlant(energyleft:1000);
 
   print('wind: ${chargephone(windplant)}');
+  print('nuclear: ${chargephone(nuclearplant)}');
 }
 
 double chargephone(energyplant plant) {
@@ -16,7 +18,7 @@ enum PlantType { wind, nuclear, water }
 
 abstract class energyplant {
   double energyleft;
-  PlantType type;
+  final PlantType type;
 
   energyplant({required this.energyleft, required this.type});
 
@@ -28,7 +30,22 @@ class WindPlant extends energyplant {
       : super(energyleft: initialenergy, type: PlantType.wind);
 
   @override
-  void consumeEnergy(double amount) {
+  void consumeEnergy(double amount){
     energyleft -= amount;
+  }
+}
+
+class nuclearPlant implements energyplant{
+  @override
+  double energyleft;
+
+  @override
+  final PlantType type = PlantType.nuclear;
+
+  nuclearPlant({required this.energyleft});
+
+  @override
+  void consumeEnergy(double amount) {
+    energyleft -= (amount * 0.5);
   }
 }
