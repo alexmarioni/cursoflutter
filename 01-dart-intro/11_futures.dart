@@ -10,7 +10,7 @@ void main() {
   
 }
 
-Future<String> httpget(String url) async {
+Future<String> httpget(String url) {
   return Future.delayed(const Duration(seconds: 1), () {
     throw 'error en la peticion http';
     //return 'Respuesta de la petición http';
