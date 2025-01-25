@@ -60,7 +60,7 @@ class WindPlant extends EnergyPlant {
   }
 }
 
-//Implements debe utilizar TODO lo declarado en la clase padre y sobreescribirlo
+/*Implements debe utilizar TOODO lo declarado en la clase padre y sobreescribirlo*/
 class NuclearPlant implements EnergyPlant {
   @override
   double _energyLeft;  // No podemos usar un setter de la clase base directamente

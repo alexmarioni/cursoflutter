@@ -11,7 +11,7 @@ void main() async {
   try {
     final value = await httpGet('https://fernando-herrera.com/cursos');
     print(value);
-  } on Exception catch(excep){
+  } on Exception catch (excep) {
     print("""Parece que tenemos una excepción aquí:
     $excep
     """);
@@ -32,7 +32,7 @@ Future<String> httpGet(String url) async {
   await Future.delayed(const Duration(seconds: 2));
   // y luego se sigue
 
-   throw Exception('Acá no sé qué pasó pero es raro');
+  throw Exception('Acá no sé qué pasó pero es raro');
 
   // throw 'Error en la petición';
 
